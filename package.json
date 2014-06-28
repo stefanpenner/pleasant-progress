@@ -1,0 +1,22 @@
+{
+  "name": "pleasant-progress",
+  "version": "0.0.0",
+  "description": "module for outputing a pleasant progress indicator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanpenner/pleasant-progress.git"
+  },
+  "keywords": [
+    "progress"
+  ],
+  "author": "Stefan Penner <stefan.penner@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanpenner/pleasant-progress/issues"
+  },
+  "homepage": "https://github.com/stefanpenner/pleasant-progress"
+}
