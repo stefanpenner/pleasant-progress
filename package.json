@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/stefanpenner/pleasant-progress/issues"
   },
-  "homepage": "https://github.com/stefanpenner/pleasant-progress"
+  "homepage": "https://github.com/stefanpenner/pleasant-progress",
+  "dependencies": {}
 }
