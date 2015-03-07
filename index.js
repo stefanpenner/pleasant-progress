@@ -15,10 +15,17 @@ function PleasantProgress(options) {
 PleasantProgress.prototype.start = function(message, stepString) {
   this.message = message;
   this.stepString = stepString || '.';
-  this.stop();
-  this.isRunning = true;
-  this.print();
-  this.stepInterval = setInterval(this.step.bind(this), this.rate);
+  if (!/^(dumb|emacs)$/.test(process.env.TERM)) {
+    this.stop();
+    this.isRunning = true;
+    this.print();
+    this.stepInterval = setInterval(this.step.bind(this), this.rate);
+  }
+  else {
+    this.progress = 3;
+    this.print();
+    this.stream.write('\n');
+  }
 };
 
 PleasantProgress.prototype.stop = function(printWithFullStepString) {
