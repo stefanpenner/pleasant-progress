@@ -12,6 +12,22 @@ function PleasantProgress(options) {
   this.progress = 0;
 }
 
+PleasantProgress.prototype.forPromise = function(message, promise) {
+  this.start(message);
+
+  try {
+    return promise.then(function(value) {
+      this.stop();
+      return value;
+    }, function(reason) {
+      this.stop();
+      throw reason;
+    });
+  } finally {
+    this.stop();
+  }
+};
+
 PleasantProgress.prototype.start = function(message, stepString) {
   this.message = message;
   this.stepString = stepString || '.';
