@@ -29,7 +29,7 @@ PleasantProgress.prototype.forPromise = function(message, promise) {
 };
 
 PleasantProgress.prototype.start = function(message, stepString) {
-  this.message = message;
+  this.message = message || '';
   this.stepString = stepString || '.';
   this.stop();
   this.isRunning = true;
